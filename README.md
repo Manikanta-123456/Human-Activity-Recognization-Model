@@ -68,17 +68,3 @@ Manikanta Pilli
 
 ---
 
-### ✅ Instructions to Add It on GitHub:
-
-1. Go to your repo: [Manikanta-123456/Human-Activity-Recognization-Model](https://github.com/Manikanta-123456/Human-Activity-Recognization-Model)
-2. Click **“Add file”** → **“Create new file”**
-3. In the name box, type: `README.md`
-4. Paste **all the above content**
-5. Scroll down → click the **green “Commit new file”** button
-
-That's it! Your repo homepage will now look professional 🎉
-
-Let me know if you'd also like:
-- A `requirements.txt`
-- A GitHub Actions workflow to auto-run the model
-- A LinkedIn post to show off your project!
