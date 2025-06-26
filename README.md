@@ -5,6 +5,9 @@ This project uses a **Random Forest Classifier** to recognize human activities b
 It classifies activities like walking, sitting, and lying down using accelerometer and gyroscope readings collected from smartphones.
 
 ---
+<p align="center">
+  <img src="https://github.com/Manikanta-123456/Human-Activity-Recognization-Model/blob/main/Forest%20fire%20detection%20prototype.jpg?raw=true" width="500" alt="Forest Fire Detection Prototype">
+</p>
 
 ## 📁 Dataset
 
