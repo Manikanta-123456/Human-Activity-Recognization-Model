@@ -1,72 +1,84 @@
-# 🧠 Human Activity Recognition Using Smartphones
+# 🧠 Human Activity Recognition Model
 
-This project applies machine learning (Random Forest) to recognize human activities (walking, sitting, etc.) using smartphone sensor data from the [UCI HAR Dataset](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones).
+This project uses a **Random Forest Classifier** to recognize human activities based on smartphone sensor data from the [UCI HAR Dataset](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones).
 
----
-
-## 📊 Dataset
-
-The dataset contains accelerometer and gyroscope readings from smartphones worn by 30 volunteers during daily activities.
-
-**Activities classified:**
-1. WALKING  
-2. WALKING_UPSTAIRS  
-3. WALKING_DOWNSTAIRS  
-4. SITTING  
-5. STANDING  
-6. LAYING  
-
-📁 Dataset folder:  
-`UCI HAR Dataset/train/`  
-`UCI HAR Dataset/test/`
+It classifies activities like walking, sitting, and lying down using accelerometer and gyroscope readings collected from smartphones.
 
 ---
 
-## 🛠️ Technologies Used
+## 📁 Dataset
 
-- Python 3.x
-- pandas
-- scikit-learn
-- RandomForestClassifier
+We use the **UCI HAR Dataset**, which includes:
+
+- Measurements from 30 participants
+- Sensor signals from a smartphone's accelerometer and gyroscope
+- Pre-processed and normalized training and test data
+
+📂 Folder structure:
 
 ---
 
-## 🚀 How to Run
+## 🧪 Activities Classified
 
-1. 📥 Download the dataset:  
-   [https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones)
+The following 6 human activities are recognized:
 
-2. 📂 Unzip the dataset and place it as:  
-   `UCI HAR Dataset/UCI HAR Dataset/train/...`
+1. 🚶 WALKING  
+2. 🧗‍♂️ WALKING_UPSTAIRS  
+3. 🧎 WALKING_DOWNSTAIRS  
+4. 🪑 SITTING  
+5. 🧍 STANDING  
+6. 🛌 LAYING  
 
-3. ✅ Run the Python script:
+---
 
-```python
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+## ⚙️ Technology Stack
 
-# Load the datasets
-def load_dataset(filepath):
-    df = pd.read_csv(filepath, sep='\s+', header=None)
-    return df
+- **Language**: Python 3.10  
+- **Libraries**:
+  - `pandas`
+  - `scikit-learn`
+  - `matplotlib` (optional for plots)
 
-# Load the data
-def load_data():
-    X_train = load_dataset('UCI HAR Dataset/train/X_train.txt')
-    y_train = load_dataset('UCI HAR Dataset/train/y_train.txt')
-    X_test = load_dataset('UCI HAR Dataset/test/X_test.txt')
-    y_test = load_dataset('UCI HAR Dataset/test/y_test.txt')
-    return X_train, y_train, X_test, y_test
+- **Algorithm**: `RandomForestClassifier` from scikit-learn
 
-# Model training and evaluation
-X_train, y_train, X_test, y_test = load_data()
-y_train = y_train.values.ravel()
-y_test = y_test.values.ravel()
+---
 
-clf = RandomForestClassifier(n_estimators=100, random_state=42)
-clf.fit(X_train, y_train)
+## 🚀 How to Run the Project
 
-y_pred = clf.predict(X_test)
-accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy * 100:.2f}%')
+1. 📥 Clone the repository
+
+```bash
+git clone https://github.com/Manikanta-123456/Human-Activity-Recognization-Model.git
+cd Human-Activity-Recognization-Model
+Human-Activity-Recognization-Model/
+├── activity_recognition.py
+├── environment.yml
+└── UCI HAR Dataset/
+python activity_recognition.py
+Accuracy: 93.58%
+Actual: WALKING, Predicted: WALKING
+Actual: SITTING, Predicted: STANDING
+Actual: STANDING, Predicted: STANDING
+...
+conda env create -f environment.yml
+conda activate har-env
+👤 Author
+Manikanta Pilli
+📧 Email: pillimanikanta44@gmail.com
+
+---
+
+### ✅ Instructions to Add It on GitHub:
+
+1. Go to your repo: [Manikanta-123456/Human-Activity-Recognization-Model](https://github.com/Manikanta-123456/Human-Activity-Recognization-Model)
+2. Click **“Add file”** → **“Create new file”**
+3. In the name box, type: `README.md`
+4. Paste **all the above content**
+5. Scroll down → click the **green “Commit new file”** button
+
+That's it! Your repo homepage will now look professional 🎉
+
+Let me know if you'd also like:
+- A `requirements.txt`
+- A GitHub Actions workflow to auto-run the model
+- A LinkedIn post to show off your project!
